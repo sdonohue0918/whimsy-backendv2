@@ -20,7 +20,18 @@ class ArtworksController < ApplicationController
     private
 
     def artwork_params
-        params.require(:artwork).permit(:user_id, :MET_ID, :title, :image_link, :artist_name, :date_made, :medium, :country_of_origin, :region, :kind)
+        params.require(:artwork).permit(:user_id, :objectID, :title, :primaryImage, :artistDisplayName, :objectDate, :medium, :country_of_origin, :region, :kind)
     end
 
 end
+
+# t.integer "objectID"
+#     t.string "title"
+#     t.string "primaryImage"
+#     t.string "artistDisplayName"
+#     t.string "objectDate"
+#     t.string "medium"
+#     t.string "country_of_origin"
+#     t.string "region"
+#     t.string "kind"
+#     t.integer "user_id"

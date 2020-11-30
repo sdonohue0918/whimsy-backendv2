@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_004116) do
+ActiveRecord::Schema.define(version: 2020_11_30_153547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 2020_11_30_004116) do
   end
 
   create_table "artworks", force: :cascade do |t|
-    t.integer "MET_ID"
+    t.integer "objectID"
     t.string "title"
-    t.string "image_link"
-    t.string "artist_name"
-    t.string "date_made"
+    t.string "primaryImage"
+    t.string "artistDisplayName"
+    t.string "objectDate"
     t.string "medium"
     t.string "country_of_origin"
     t.string "region"

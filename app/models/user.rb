@@ -3,10 +3,8 @@ class User < ApplicationRecord
     has_many :subscribers
     has_many :likes
     has_many :comments
+    has_many :artworks
 
-    def get_likes
-        self.likes
     
-    end
 
 end

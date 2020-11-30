@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :users
   resources :subscribers
   resources :eisels
+  resources :likes
+  resources :artworks
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_175231) do
+ActiveRecord::Schema.define(version: 2020_11_29_234041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(version: 2020_11_25_175231) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "artworks", force: :cascade do |t|
+    t.integer "MET_ID"
+    t.string "title"
+    t.string "image_link"
+    t.string "artist_name"
+    t.string "date_made"
+    t.string "medium"
+    t.string "country_of_origin"
+    t.string "region"
+    t.string "type"
+    t.integer "user_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.text "post"
     t.integer "user_id"
@@ -48,6 +61,8 @@ ActiveRecord::Schema.define(version: 2020_11_25_175231) do
     t.string "name"
     t.string "genre"
     t.integer "user_id"
+    t.bigint "like_id"
+    t.index ["like_id"], name: "index_eisels_on_like_id"
   end
 
   create_table "likes", force: :cascade do |t|

@@ -11,18 +11,20 @@ end
 
 def index
     eisels = Eisel.all
-    render json: eisels
+    render json: eisels, include: [:likes]
 end
 
 def show
     eisel = Eisel.find_by(id: params[:id])
-    render json: rails_blob_url(eisel.imagefile)
+    render json: eisel, include: [:likes]
     
 end
 
-def delete
+def destroy
+    byebug
     eisel = Eisel.find_by(id: params[:id])
-    
+    eisel.delete_imagefile
+    eisel.destroy
     render json: eisel
 end
 

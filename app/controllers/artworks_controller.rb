@@ -6,6 +6,7 @@ class ArtworksController < ApplicationController
     end
 
     def create
+        byebug
         artwork = Artwork.create(artwork_params)
         render json: artwork
     end
@@ -19,7 +20,7 @@ class ArtworksController < ApplicationController
     private
 
     def artwork_params
-        params.require(:artwork).permit(:user_id, :MET_ID, :title, :image_link, :artist_name, :date_made, :medium, :country_of_origin, :region, :type)
+        params.require(:artwork).permit(:user_id, :MET_ID, :title, :image_link, :artist_name, :date_made, :medium, :country_of_origin, :region, :kind)
     end
 
 end

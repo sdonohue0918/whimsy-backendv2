@@ -17,7 +17,7 @@ gem 'puma', '~> 4.1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'fast_jsonapi'
 gem 'faker'
-gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3"
 gem 'dotenv-rails'
 
 # Use Active Storage variant

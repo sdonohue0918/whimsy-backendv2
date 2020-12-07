@@ -1,7 +1,7 @@
 class EiselsController < ApplicationController
 
 def create
-    # byebug
+    
     eisel = Eisel.create(name: params[:eisel][:name], genre: params[:eisel][:genre], user_id: params[:eisel][:user_id])
     eisel.imagefile.attach(params[:eisel][:imagefile])
     eisel.download_imagefile
@@ -21,7 +21,7 @@ def show
 end
 
 def destroy
-    byebug
+    
     eisel = Eisel.find_by(id: params[:id])
     eisel.delete_imagefile
     eisel.destroy

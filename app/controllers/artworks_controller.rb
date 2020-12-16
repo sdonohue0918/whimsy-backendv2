@@ -25,13 +25,3 @@ class ArtworksController < ApplicationController
 
 end
 
-# t.integer "objectID"
-#     t.string "title"
-#     t.string "primaryImage"
-#     t.string "artistDisplayName"
-#     t.string "objectDate"
-#     t.string "medium"
-#     t.string "country_of_origin"
-#     t.string "region"
-#     t.string "kind"
-#     t.integer "user_id"

@@ -20,6 +20,9 @@ User.destroy_all
 
 end
 
-10.times do
-    Eisel.create(name: Faker::Artist.name, genre: Faker::Name.name, user_id: User.all.sample.id)
+1.times do
+    Eisel.create(name: Faker::Artist.name, genre: Faker::Name.name, user_id: User.all.sample.id, imagefile: 'https://www.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F10%2FWallpapers-Doodle-HD.jpg&f=1&nofb=1')
 end
+
+
+
